@@ -15,7 +15,7 @@ Designed with a **modern dark UI** using **Tailwind CSS** and enhanced with **pa
 | Feature               | Description                                              |
 |-----------------------|----------------------------------------------------------|
 | 👤 Login / Register    | User authentication system with secure form submission  |
-| 🧭 Profile Dashboard   | Centralized access to all NLP tools                      |
+| 🧭 Profile Dashboard   | Centralized access to all NLP tools                     |
 | 📍 NER Tool            | Extracts named entities from input text                 |
 | 😊 Sentiment Tool      | Analyzes polarity & subjectivity of text                |
 | 🚫 Abuse Detection     | Detects offensive or abusive words                      |
@@ -33,10 +33,11 @@ Designed with a **modern dark UI** using **Tailwind CSS** and enhanced with **pa
 ---
 
 ## 📁 Folder Structure
-nlp-web-app/
+<pre>
+coreNLPX-/
 │
 ├── static/
-│   └── particles.json              # Background animation configuration
+│   └── particles.json             
 │
 ├── templates/
 │   ├── login.html
@@ -46,9 +47,11 @@ nlp-web-app/
 │   ├── sentiment_analysis.html
 │   └── abuse_detection.html
 │
-├── app.py                          # Flask application backend
-├── requirements.txt                # List of Python dependencies
-└── README.md                       # Project documentation
+├── app.py                          
+├── requirements.txt               
+└── README.md                      
+</pre>
+                  
 
 ---
 
@@ -59,6 +62,23 @@ nlp-web-app/
 ```bash
 git clone https://github.com/garvit1408/coreNLPX-.git
 cd coreNLPX-
+```
+### 2. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Run the app
+
+```bash
 python app.py
 ```
+
+🧑‍💻 Developer
+
+Garvit Singh
+M.Tech CSE – IIIT Delhi
+📫 LinkedIn | ✉️ Email
+
+
