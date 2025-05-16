@@ -1,18 +1,1 @@
-{
-    "garvit@gmail.com": [
-        "Garvit",
-        "garvit123"
-    ],
-    "Garvit@gmail.com": [
-        "Garvit",
-        "garvit1234"
-    ],
-    "fda@gmail.com": [
-        "ravi",
-        "afds"
-    ],
-    "ankita@gmail.com": [
-        "ankita",
-        "ankita123"
-    ]
-}
+{"garvit@gmail.com": ["Garvit", "garvit123"], "Garvit@gmail.com": ["Garvit", "garvit1234"], "fda@gmail.com": ["ravi", "afds"], "ankita@gmail.com": ["ankita", "ankita123"], "ravi@gmail.com": ["ravi", "ravi123"]}
