@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Profile</title>
+</head>
+<body>
+    <p>What would you like to do ?? </p>
+    <ul>
+        <li><a href="/ner">NER</a></li>
+        <li><a href="/sentiment_analysis">Sentiment Analysis</a></li>
+        <li><a href="/abuse_detection">Abuse Detection</a></li>
+    </ul>
+</body>
+   
+</html>
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile | NLP App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effect -->
+    <div id="particles-js"></div>
+
+    <!-- Profile Container -->
+    <div class="flex items-center justify-center h-screen">
+        <div class="bg-gray-800 shadow-2xl rounded-2xl px-10 py-10 w-full max-w-md">
+            <h1 class="text-3xl font-bold text-center mb-6">Welcome to NLP App</h1>
+            <p class="text-center mb-6 text-gray-300 text-lg">What would you like to do?</p>
+            <ul class="space-y-4 text-center">
+                <li>
+                    <a href="/ner" class="block w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-white transition">Named Entity Recognition</a>
+                </li>
+                <li>
+                    <a href="/sentiment_analysis" class="block w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-medium text-white transition">Sentiment Analysis</a>
+                </li>
+                <li>
+                    <a href="/abuse_detection" class="block w-full py-2 bg-red-600 hover:bg-red-700 rounded-lg font-medium text-white transition">Abuse Detection</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Particles Config Loader -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js loaded for profile page');
+        });
+    </script>
+</body>
+</html>

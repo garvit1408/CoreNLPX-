@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analysis</title>
+</head>
+<body>
+  <h1>Sentiment Analysis</h1>
+
+  <form action="/perform_sentiment_analysis" method="post">
+    <label for="text">Enter text here:</label><br>
+    <textarea name="text" rows="6" cols="60" placeholder="Type something here..." required></textarea><br><br>
+    <input type="submit" value="Analyze Sentiment">
+  </form>
+
+  {% if response %}
+    {% if response.error %}
+      <p style="color: red;"><strong>Error:</strong> {{ response.error }}</p>
+    {% else %}
+      <h3>Sentiment Result:</h3>
+      <p><strong>Sentiment:</strong> {{ response.sentiment }}</p>
+      <p><strong>Polarity:</strong> {{ response.polarity }}</p>
+      <p><strong>Subjectivity:</strong> {{ response.subjectivity }}</p>
+    {% endif %}
+  {% endif %}
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analysis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <div class="flex items-center justify-center min-h-screen px-4">
+    <div class="bg-gray-800 shadow-2xl rounded-2xl px-10 py-10 w-full max-w-2xl">
+      <h1 class="text-3xl font-bold text-center mb-6 text-yellow-400">Sentiment Analysis</h1>
+
+      <form action="/perform_sentiment_analysis" method="post" class="space-y-6">
+        <div>
+          <label for="text" class="block mb-2 font-medium">Enter text here:</label>
+          <textarea name="text" rows="6" cols="60" placeholder="Type something here..." required
+            class="w-full p-4 bg-gray-700 rounded-lg border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2 bg-yellow-500 hover:bg-yellow-600 rounded-lg font-semibold text-black">Analyze Sentiment</button>
+      </form>
+
+      {% if response %}
+        <div class="mt-8">
+          {% if response.error %}
+            <p class="text-red-400 font-semibold">❌ <strong>Error:</strong> {{ response.error }}</p>
+          {% else %}
+            <h3 class="text-xl font-semibold mb-3 text-green-300">Sentiment Result:</h3>
+            <p><strong class="text-white">Sentiment:</strong> <span class="text-blue-300">{{ response.sentiment }}</span></p>
+            <p><strong class="text-white">Polarity:</strong> <span class="text-purple-300">{{ response.polarity }}</span></p>
+            <p><strong class="text-white">Subjectivity:</strong> <span class="text-pink-300">{{ response.subjectivity }}</span></p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Load Particle Animation -->
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js loaded for Sentiment Analysis');
+    });
+  </script>
+</body>
+</html>

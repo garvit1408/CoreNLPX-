@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abuse Detection</title>
+</head>
+<body>
+  <h1>Abuse Detection</h1>
+
+  <form action="/perform_abuse_detection" method="post">
+    <label for="text">Enter text here:</label><br>
+    <textarea name="text" rows="6" cols="60" placeholder="Type something here..." required></textarea><br><br>
+    <input type="submit" value="Check for Abuse">
+  </form>
+
+  {% if response %}
+    <h3>Detection Result:</h3>
+    {% if response.is_abusive %}
+      <p style="color: red;"><strong>⚠️ Abusive language detected.</strong></p>
+      <p><strong>Words found:</strong> {{ response.bad_words | join(', ') }}</p>
+    {% else %}
+      <p style="color: green;"><strong>No abusive language detected.</strong></p>
+    {% endif %}
+  {% endif %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abuse Detection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <div class="flex items-center justify-center min-h-screen px-4">
+    <div class="bg-gray-800 shadow-2xl rounded-2xl px-10 py-10 w-full max-w-2xl">
+      <h1 class="text-3xl font-bold text-center mb-6 text-red-400">Abuse Detection</h1>
+
+      <form action="/perform_abuse_detection" method="post" class="space-y-6">
+        <div>
+          <label for="text" class="block mb-2 font-medium">Enter text here:</label>
+          <textarea name="text" rows="6" cols="60" placeholder="Type something here..." required
+            class="w-full p-4 bg-gray-700 rounded-lg border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2 bg-red-600 hover:bg-red-700 rounded-lg font-semibold">Check for Abuse</button>
+      </form>
+
+      {% if response %}
+        <div class="mt-8">
+          <h3 class="text-xl font-semibold mb-2 text-yellow-300">Detection Result:</h3>
+          {% if response.is_abusive %}
+            <p class="text-red-400 font-bold mb-2">⚠️ Abusive language detected.</p>
+            <p><strong class="text-white">Words found:</strong> <span class="text-gray-300">{{ response.bad_words | join(', ') }}</span></p>
+          {% else %}
+            <p class="text-green-400 font-bold">✅ No abusive language detected.</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Load Particles -->
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js loaded for Abuse Detection page');
+    });
+  </script>
+</body>
+</html>
