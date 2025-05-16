@@ -33,3 +33,32 @@ Designed with a **modern dark UI** using **Tailwind CSS** and enhanced with **pa
 ---
 
 ## 📁 Folder Structure
+nlp-web-app/
+│
+├── static/
+│   └── particles.json              # Background animation configuration
+│
+├── templates/
+│   ├── login.html
+│   ├── register.html
+│   ├── profile.html
+│   ├── ner.html
+│   ├── sentiment_analysis.html
+│   └── abuse_detection.html
+│
+├── app.py                          # Flask application backend
+├── requirements.txt                # List of Python dependencies
+└── README.md                       # Project documentation
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/garvit1408/coreNLPX-.git
+cd coreNLPX-
+pip install -r requirements.txt
+python app.py
+```
